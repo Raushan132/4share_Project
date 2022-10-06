@@ -1,0 +1,95 @@
+@media (max-width:720px) {
+
+	
+label.error {
+    background: #f3d209e8;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 15px;
+    left:40%;
+    z-index:9;
+}
+
+label.success {
+    background: #72ffbbf2;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 15px;
+    left: 40%;
+    z-index:9;
+}
+    .content .file_box form {
+        top: 50px;
+        left: 20px;
+        width: 350px;
+        height: 300px;
+        font-size: 0.6rem;
+        margin-top: 20px;
+    }
+
+    .content .file_box h1 {
+        top: 40px;
+        left: 55px;
+        font-weight: 600;
+    }
+
+    .content .file_box .select_file img {
+        top: -40px;
+        left: 20px;
+        width: 30px;
+    }
+
+    .content .file_box #inputTypeFile {
+        top: 0px;
+        left: 10px;
+        width: 320px;
+        height: 150px;
+        font-size: 15px;
+    }
+
+    .content .file_box #inputTypeFile::-webkit-file-upload-button {
+        top: 70%;
+        left: 30%;
+    }
+
+    .content .file_box .upload {
+        position: absolute;
+        top: 84%;
+        left: 33%;
+        font-size: 15px;
+    }
+
+    .content .file_box .upload_file img {
+        top: 80px;
+        left: -18px;
+        width: 40px;
+    }
+
+    .content .file_box #ShowFilesList {
+        top: 396px;
+        left: 15px;
+        height: 230px;
+        width: 360px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .content .file_box .addedFile {
+        font-size: 15px;
+    }
+
+    .content .file_box .addedFile img {
+        position: relative;
+        top: 5px;
+        width: 30px;
+    }
+
+    .content .file_box .close_button {
+        left: 0px;
+        top: 2px;
+        width: 20px;
+        font-size: 20px;
+    }
+}

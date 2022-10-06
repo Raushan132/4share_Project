@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="assets/style/nav.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/mob_nav.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/document.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/mob_document.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/upload_button.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/mob_upload_button.css">
+	<script src="assets/js/jquery.js"></script>
+	<title th:with="www=${#httpServletRequest.requestURI}" th:text="${#strings.arraySplit(www,'/')[1]}">document</title>
+</head>
+
+<body>
+	<div class="container">
+		<div th:replace="navigation :: header"></div>
+
+		<div class="content">
+			<div class="logo">
+				4Share
+			</div>
+		    <div class="document_head" th:with="www=${#httpServletRequest.requestURI}">
+				<span th:text="${#strings.arraySplit(www,'/')[1]}">Document</span>
+			</div> 
+			
+			<!-- <div class="refresh-box" th:with="url=${#httpServletRequest.requestURI}">
+					<a th:href="@{/refreshDB/{uri}(uri=${#strings.arraySplit(url,'/')[1]})}" class="refresh item"><img src="assets/uploadButtonIcon/refresh.svg" alt="refresh image"></a>
+		    </div>
+ -->
+			<hr />
+
+			<div class="document_file_content">
+		       <label class="data" th:if="${count == 0}">no data available</label>
+				<div class="document_file" th:each="fileDetail: ${document_data}">
+					<img th:src="@{'assets/documentIcon/'+${fileDetail.fileSubType}+'.svg'}" alt="file icon">
+					<form action="/upload" method="post">
+						<div class="document_name">
+							<span><strong>Name : </strong><span th:text="${fileDetail.fileName}"></span></span>
+						</div>
+						<div class="document_type">
+							<span><strong>Type : </strong><span th:text="${fileDetail.extension}"></span></span>
+						</div>
+						<div class="document_size">
+							<span><strong>Size : </strong><span th:text="${fileDetail.size}"></span></span>
+						</div>
+						<div class="document_date">
+							<span><strong>Date : </strong><span th:text="${fileDetail.fileDate}"></span></span>
+						</div>
+
+						<div class="delete_section" sec:authorize="hasRole('ADMIN')" th:with="url=${#httpServletRequest.requestURI}">
+							<a th:href="@{/deletefileId/{uri}/{id}(uri=${#strings.arraySplit(url,'/')[1]},id=${fileDetail.fileId})}" class="btn delete_button"> <img src="assets/documentIcon/deleteIcon.svg" class="delete_button_icon" alt="delete icon">Delete</a>
+						</div>
+
+						<div class="download_section">
+							<a th:href="@{/downloadfile/{id}(id=${fileDetail.fileId})}" class="btn download_button"> <img src="assets/documentIcon/downloadIcon.svg" class="download_button_icon" alt="download icon">Download</a>
+						</div>
+					</form>
+				</div>
+				
+				
+			</div>
+			
+			
+			<!-- file upload button -->
+			<div class="fileUpload_box">
+				<div class="fileUpload_button">
+					<img src="assets/uploadButtonIcon/fileUploadIcon.svg" alt="fileUploadIcon">
+				</div>
+
+				<div class="box" th:with="url=${#httpServletRequest.requestURI}">
+					<a th:href="@{/refreshDB/{uri}(uri=${#strings.arraySplit(url,'/')[1]})}" class="refresh item"><img src="assets/uploadButtonIcon/refresh.svg" alt="refresh image"></a>
+					<a th:href="@{/uploadFiles?input=public}" class="public_file item"><img src="assets/uploadButtonIcon/public.svg"
+							alt="public_file image"></a>
+					<a th:href="@{/uploadFiles?input=private}" class="private_file item" sec:authorize="hasRole('USER')"><img src="assets/uploadButtonIcon/private.svg"
+							alt="private_file image"></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="assets/js/nav.js"></script>
+	<script type="text/javascript" src="assets/js/upload_button.js"></script>
+
+	
+
+</body>
+
+</html>

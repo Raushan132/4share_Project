@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap');
+
+@media (max-width:720px) {
+	
+	label.data {
+	    font-size: 13px;
+    left: 25%;
+    top: 33%;
+    padding: 10px 50px 10px 50px;
+    color: #fff;
+    background: #ff8080;
+    transform: translate(-50%,-50%);
+    position: relative;
+    text-transform: uppercase;
+	
+	}
+	
+    .content .logo {
+        width: 100px;
+        height: 40px;
+        top: 8px;
+        left: 120px;
+        font-size: 35px;
+        font-family: 'Baloo Paaji 2', cursive;
+    }
+
+    .content .document_head {
+        width: 100px;
+        height: 40px;
+        top: 70px;
+        left: 20px;
+        font-size: 26px;
+    }
+
+    .content hr {
+        top: 101px;
+        left: 8px;
+        width: 370px;
+        height: 1px;
+    }
+
+    .content .document_file_content {
+        top: 95px;
+        height: 430px;
+        width: 387px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .content .document_file {
+        width: 368px;
+        height: 60px;
+        top: 0px;
+        left: 10px;
+        margin-top: 10px;
+    }
+
+    .content .document_file img {
+        width: 35px;
+    }
+
+    .content .document_file .document_name {
+        width: 240px;
+        heigth:28px;
+        top: 4px;
+        left: 6px;
+        font-size: 15px;
+        overflow:hidden;
+
+        /* border: 2px solid blue; */
+    }
+
+    .content .document_file .document_type {
+        width: 90px;
+        top: -6px;
+        left: 6px;
+        font-size: 8px;
+
+        /* border: 2px solid blue; */
+    }
+
+    .content .document_file .document_size {
+        width: 100px;
+        top: -20px;
+        left: 81px;
+        font-size: 8px;
+
+        /* border: 2px solid blue; */
+    }
+
+    .content .document_file .document_date {
+        position: relative;
+        width: 100px;
+        top: -35px;
+        left: 165px;
+        font-size: 8px;
+
+        /* border: 2px solid blue; */
+    }
+
+    .content .document_file .delete_section {
+        top: -100px;
+        left: 240px;
+        cursor: pointer;
+    }
+
+    .content .document_file .delete_section .delete_button {
+    
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-radius: 6px;
+        /* font-weight: 600; */
+        color: rgb(213, 200, 200);
+        font-size: 12px;
+    }
+
+    .content .document_file .delete_section .delete_button_icon {
+        position: relative;
+        width: 20px;
+        height: 30;
+        top: 7px;
+        left: -3px;
+    }
+
+    .content .document_file .download_section{
+        position:relative;
+        top: -75px;
+        left: 253px;
+        cursor: pointer;
+    }
+    
+    .content .document_file .download_section .download_button{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-radius: 6px;
+        font-weight: 600;
+        color: rgb(213, 200, 200);
+        font-size: 10px;
+    }
+    
+    .content .document_file .download_section .download_button_icon{
+        width: 15px;
+        height: 30;
+        top: 5px;
+        left: -3px;
+    }
+}

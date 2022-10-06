@@ -1,0 +1,154 @@
+.header {
+    position: relative;
+    top: 0%;
+    left: 10%;
+    width: 200px;
+    height: 186px;
+}
+
+.logo{
+    font-family: 'Coustard';
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 67px;
+
+background: linear-gradient(180deg, #E82929 0%, rgba(62, 34, 234, 0.58) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
+.content_name{
+    position: relative;
+    top: 34%;
+    left: 56%;
+    color: #0d52c3ab;
+    text-decoration: underline;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.cover {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    height: 70vh;
+    width: 120%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+.setting_box {
+   position: relative;
+    height: 70vh;
+    width: 871px;
+}
+.inSetting_box {
+    width: 80%;
+    padding-bottom: 5%;
+    margin-bottom: 10%;
+    position: relative;
+    top: 30px;
+    left: 11%;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 7px #38363685;
+}
+
+.inSetting_box hr {
+    position: relative;
+    left: 34px;
+    top: -3px;
+    width: 77%;
+    box-sizing: border-box;
+    background: #CB7BD2;
+    height: 3px;
+    box-shadow: 3px 5px 5px #26262669;
+}
+
+span.headtxt {
+    position: relative;
+    top: 17px;
+    left: 10px;
+    color: #CB7BD2;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Inter;
+}
+.cont-box {
+    position: relative;
+    top: 15px;
+    left: 18%;
+    width: 75%;
+    height: 100px;
+    margin-bottom: 25px;
+    background: #F9F5F5;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px #c1bdbd;
+}
+
+.icon.icon-setting {
+    display: inline-flex;
+    position: relative;
+    top: 30px;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+}
+.icon.icon-setting img{
+    width: 100%;
+    height: 100%;
+}
+.icon.icon-setting.adjust{
+    left: 30px;
+}
+.setting-form {
+    position: relative;
+    left: 60px;
+    top: 3px;
+}
+
+.lbl_setting {
+    font-family: 'Inter';
+    font-style: normal;
+    color: #427BEC;
+}
+.lbl_setting.guest{
+    color: #E842EC;;
+}
+input#user,#guest,#address,#email,#address,#location {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+.btn {
+    border-radius: 20px;
+    border: navajowhite;
+    background: #00f;
+    color: #fff;
+    padding: 5px 15px 5px 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transform: scale(1.0);
+    transition: 0.5s;
+    margin-left: 10px;
+}
+.btn:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.btn.btn-show{
+    background: #57C2F0;
+}
+.btn-guest,.btn-user{
+	text-decoration:none;
+}

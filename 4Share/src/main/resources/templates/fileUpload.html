@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="assets/style/nav.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/mob_nav.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/fileUpload.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/mob_fileUpload.css">
+	<script src="assets/js/jquery.js"></script>
+	<title>file upload</title>
+</head>
+
+<body>
+	<div class="container">
+		 <div th:replace="navigation :: header"></div>
+		 
+		<div class="content">
+		<div th:if="${param.error !=null}">
+		<label class="error" th:if="${error == 'true'}" >not Uploaded try again</label>
+		<label class="success" th:if="${error=='false'}">Upload Successful</label>
+		</div>
+        
+			<div class="file_box">
+				<form th:action="@{/uploadFiles}" method="post" enctype="multipart/form-data">
+					<h1>Drag & Drop the files here or</h1>
+
+					<div class="select_file">
+						<img src="assets/fileIcon/selectFile.svg" alt="Select file image">
+						<input type='file' id='inputTypeFile' name="file" multiple />
+					</div>
+
+					<div class="upload_file">
+						<img src="assets/fileIcon/uploadFile.svg" alt="Select file image">
+						<input type="submit" value="Upload Files" class="upload">
+					</div>
+				</form>
+
+				<div id="ShowFilesList"></div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript" src="assets/js/nav.js"></script>
+	<script type="text/javascript" src="assets/js/fileUpload.js"></script>
+
+</body>
+
+</html>

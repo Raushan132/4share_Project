@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+	
+</head>
+<body>
+
+<header>
+	<div class="barhead">
+	<div class="bar"><span class="mid"></span></div>
+	</div>
+	<nav class="active" id="navigation">
+		
+		<ul>
+			<li th:classappend="${#httpServletRequest.getRequestURI() =='/4share/dashboard' ? 'active':''}"><a th:href="@{/dashboard}"><span class="icon"><img src="assets/icon/home.svg"alt="icon"></span><span class="nav_txt">Home</span></a></li>
+			<li><a th:href="@{/allFiles}"><span class="icon"><img src="assets/icon/AllFiles.svg"alt="icon"></span><span class="nav_txt">All Files</a></li>
+			<li><a th:href="@{/document}"><span class="icon"><img src="assets/icon/Document.svg"alt="icon"></span><span class="nav_txt">Document</span></a></li>
+			<li><a th:href="@{/images}"><span class="icon"><img src="assets/icon/image.svg"alt="icon"></span><span class="nav_txt">Images</span></a></li>
+			<li><a th:href="@{/music}"><span class="icon"><img src="assets/icon/Music.svg"alt="icon"></span><span class="nav_txt">Music</span></a></li>
+			<li><a th:href="@{/video}"><span class="icon"><img src="assets/icon/Video.svg"alt="icon"></span><span class="nav_txt">Videos</span></a></li>
+			<li  sec:authorize="hasRole('ADMIN')" th:classappend="${#httpServletRequest.getRequestURI() =='/4share/setting' ? 'active':''}"><a th:href="@{/setting}"><span class="icon"><img src="assets/icon/setting.svg"alt="icon"></span><span class="nav_txt">Setting</span></a></li>
+			<li><a th:href="@{/about}"><span class="icon"><img src="assets/icon/about.svg"alt="icon"></span><span class="nav_txt">About</span></a></li>
+			<li><a href="#"><span class="icon"><img src="assets/icon/contact.svg"alt="icon"></span><span class="nav_txt">Contact us</span></a></li>
+			<li><a th:href="@{/logout}"><span class="icon"><img src="assets/icon/logout.svg"alt="icon"></span><span class="nav_txt">Logout</span></a></li>
+
+
+		</ul>
+	</nav>
+	</header>
+
+
+   <script type="text/javascript" src="assets/js/nav.js">
+   
+   </script>
+
+</body>
+</html>

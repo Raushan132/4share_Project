@@ -1,0 +1,479 @@
+
+.content .logo{
+position: absolute;
+width: 219px;
+height: 78px;
+left: 150px;
+top: 18px;
+
+font-family: 'Coustard';
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 67px;
+
+background: linear-gradient(180deg, #E82929 0%, rgba(62, 34, 234, 0.58) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+}
+.content_name{
+    position: relative;
+    top: 165px;
+    left: 16%;
+    color: #0d52c3ab;
+    text-decoration: underline;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+
+.pass_box {
+	position: absolute;
+    width: 140px;
+    height: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #ddd;
+    background: rgba(160, 54, 245, 0.74);
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: scale(1.0);
+    transition: 0.5s;
+}
+.pass_box:nth-child(2) {   /*  password box */
+     left: 85%;
+    top: 10%;
+}
+.pass_box:nth-child(3) {    /*  search box */
+    
+    left: 70%;
+    top: 10%;
+}
+
+.pass_box:hover{
+	color: #fff;
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+.search_btn{
+	text-decoration:none;
+}
+
+
+.pass_box span.icon {
+	position: relative;
+	right: 5px;
+    width: 20px;
+    height: 15px;
+   
+}
+.pass_box .icon img{
+	width: 100%;
+	height: 100%;
+}
+
+
+.box-cover {
+    position: relative;
+    top: 30%;
+    left: 10%;
+    display: grid;
+    width: 100%;
+    height: 400px;
+    grid-row-gap: 20px;
+}
+.box-cover a{
+    text-decoration: none;
+}
+.file_box {
+    position: relative;
+    width: 309px;
+    height: 192px;
+    background: #00f;
+    margin: 10px;
+    background: linear-gradient(221.2deg, rgba(12, 33, 222, 0.81) 43.27%, #25AEE9 78%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    overflow: hidden;
+    transform: scale(1.0);
+    transition: 0.5s;
+
+}
+.file_box:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.file_box.al_box{
+    background: linear-gradient(241.4deg, #A542F8 43.68%, #252CE9 90.58%);
+    grid-column: 1;
+    grid-row: 1;
+}
+.file_box.doc_box{
+    background: linear-gradient(241.4deg, #42A1F8 43.68%, #CD25E9 90.58%);
+    grid-column: 2;
+    grid-row: 1;
+}
+.file_box.pic_box{
+    background: linear-gradient(221.2deg, rgba(12, 33, 222, 0.81) 43.27%, #25AEE9 78%);
+    grid-column: 3;
+    grid-row: 1;
+}
+.file_box.mus_box{
+    background: linear-gradient(241.4deg, #A542F8 43.68%, #252CE9 90.58%);
+    grid-column: 1;
+    grid-row: 2;
+}
+.file_box.vid_box{
+    background: linear-gradient(241.4deg, #42A1F8 43.68%, #CD25E9 90.58%);
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.file_box .box_icon{
+    position: relative;
+    top: 20px;
+    left: 25px;
+    width: 50px;
+    height: 70px;
+    z-index: 9;
+}
+
+.file_box .box_icon img{
+    width: 100%;
+    height: 100%;
+}
+.file_box .box_txt{
+    position: relative;
+    top: -50px;
+    left: 65px;
+    width: 300px;
+    text-align: center;
+    font-family: 'Croissant One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 42px;
+    color: #FFFFFF;
+    z-index: 8;
+
+}
+.file_box .box_shape{
+    position: absolute;
+    top: 35px;
+    left: 118px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+.box-cover .file_box:nth-child(1) .box_shape {
+    left: 81%;
+    top: 68%;
+    border-radius: 50%;
+    background: radial-gradient(64.61% 64.61% at -6.74% 35.39%, rgba(249, 240, 234, 0.82) 0%, #FF9A62 100%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transition: 1.8s;
+    
+
+}
+
+.box-cover .file_box:nth-child(2) .box_shape {
+    left: -39px;
+    top: 57%;
+    border-radius: 50%;
+    background: radial-gradient(44.38% 44.38% at 65.17% 57.87%, rgba(252, 249, 249, 0.82) 0%, rgba(105, 246, 255, 0.82) 100%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transition: 1.8s;
+}
+.box-cover .file_box:nth-child(3) .box_shape {
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    background: radial-gradient(64.61% 64.61% at -6.74% 35.39%, rgba(240, 249, 234, 0.82) 0%, #FF62CA 100%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transition: 1.8s;
+}
+.box-cover .file_box:nth-child(4) .box_shape {
+    left: 112px;
+    top: 14px;
+    width: 57px;
+    height: 57px;
+    border: 5px solid blue;
+    border-left-color: #8c73e9;
+    border-top-color: #739de9;
+    border-bottom-color: #8c73e9;
+    border-right-color: #4cbfe8;
+    background: transparent;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transform: rotate(133.75deg);
+    transition: 1.8s;
+}
+
+.box-cover .file_box:nth-child(5) .box_shape {
+     left: 112px;
+    top: 14px;
+    width: 57px;
+    height: 57px;
+    border: 5px solid blue;
+    border-left-color: #3f51b5;
+    border-top-color: #739de9;
+    border-bottom-color: #68aca3;
+    border-right-color: #4cbfe8;
+    background: transparent;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transform: rotate(133.75deg);
+    transition: 1.8s;
+}
+.box-cover .file_box:nth-child(6) .box_shape {
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    background: radial-gradient(44.38% 44.38% at 65.17% 57.87%, rgba(252, 249, 249, 0.82) 0%, rgb(171 105 255 / 82%) 100%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transition: 1.8s;
+}
+
+.box_txt.txt_file {
+    position: relative;
+    top: 15px;
+    left: -40px;
+}
+.box_txt .txt_no {
+    position: relative;
+    font-size: 3.2em;
+    left: 9px;
+    top: -5px;
+}
+
+
+/*Hover effect of content boxes below*/
+
+.box-cover .file_box:nth-child(1):hover .box_shape{
+    left: -22px;
+    top: -18px;
+    transition: 1.8s;
+}
+
+.box-cover .file_box:nth-child(2):hover .box_shape{
+    left: 70%;
+    top: -10px;
+    transition: 1.8s;
+}
+.box-cover .file_box:nth-child(3):hover .box_shape{
+    left: -22px;
+    top: -18px;
+    transition: 1.8s;
+}
+.box-cover .file_box:nth-child(4):hover .box_shape{
+    left: 112px;
+    top: 14px;
+    transform: rotate(360deg);
+    transition: 1.8s;
+}
+.box-cover .file_box:nth-child(5):hover .box_shape{
+    left: 112px;
+    top: 14px;
+    transform: rotate(-360deg);
+    transition: 1.8s;
+}
+.box-cover .file_box:nth-child(6):hover .box_shape{
+    left: 36%;
+    top: 90%;
+    transition: 2s;
+}
+
+/*Hover effect of content boxes above*/
+
+
+.popup {
+    width: 600px;
+    position: absolute;
+    height: 385px;
+    background: linear-gradient(180deg, #19F7C1 0%, rgba(14, 129, 236, 0.89) 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 2px 2px 8px #262626;
+    border-radius: 20px;
+    display: none;
+}
+
+.popup.active{
+    display: block;
+}
+
+.cross {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 90%;
+    top: 3%;
+    cursor: pointer;
+    z-index: 9;
+  
+}
+.cross:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 5px;
+     background: #0C7C76;
+    transform: rotate(-45deg);
+    border-radius: 24px;
+}
+
+.cross:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 5px;
+    background: #0C7C76;
+    transform: rotate(45deg);
+    border-radius: 26px;
+}
+.popup_content {
+    width: 480px;
+    height: 250px;
+    background: linear-gradient(107.83deg, rgba(190, 97, 30, 0.53) -30.59%, rgba(119, 23, 241, 0.46) 88%);
+    position: relative;
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    box-shadow: 2px 3px 5px #262626;
+}
+
+.icon.icon-setting {
+    display: inline-flex;
+    position: relative;
+    top: 30px;
+    left: -38px;
+    width: 30px;
+    height: 30px;
+}
+.icon.icon-setting img{
+    width: 100%;
+    height: 100%;
+}
+.icon.icon-setting.adjust{
+    left: 30px;
+}
+.setting-form {
+    position: relative;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-22%);
+    margin-bottom: 15px;
+}
+
+.lbl_setting {
+    font-family: 'Inter';
+    font-style: normal;
+    color: #fff;
+}
+
+input#user,#guest {
+   background: transparent;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100px;
+    color: #fff;
+    margin-left: 12px;
+    font-family: 'Inter';
+}
+.btn {
+    border-radius: 20px;
+    border: navajowhite;
+    background: #00f;
+    color: #fff;
+    padding: 5px 15px 5px 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transform: scale(1.0);
+    transition: 0.5s;
+    margin-left: 10px;
+}
+.btn:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.btn.btn-show{
+   background: #651DDB;
+    font-weight: bold;
+    font-size: 15px;
+    position: relative;
+    top: -2px;
+    left: -24px;
+}
+
+.popup .box_shape{
+    position: absolute;
+    top: 35px;
+    left: 118px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+.popup .box_shape.c1 {
+    left: 5%;
+    top: 21%;
+    border-radius: 50%;
+    background: linear-gradient(264deg, rgba(240, 251, 249, 0.8) 19.77%, rgba(28, 125, 108, 0.3) 92.97%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transition: 1.8s;
+}
+.popup .box_shape.c2 {
+    left: 80%;
+    top: 8%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(222.11deg, rgba(242, 253, 251, 0.47) 29.14%, rgba(149, 147, 209, 0.3) 81.5%, rgba(24, 22, 163, 0.3) 81.5%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transition: 1.8s;
+    z-index: 1;
+}
+.popup .box_shape.c3 {
+    left: 20%;
+    top: 70%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background:  radial-gradient(54.04% 54.37% at 33.59% 20.24%, rgba(169, 209, 200, 0.8) 0%, rgba(209, 28, 213, 0.3) 100%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transition: 1.8s;
+}
+.popup .box_shape.c4 {
+    width: 50px;
+    height: 50px;
+    left: 85%;
+    top: 83%;
+    border-radius: 50%;
+    background:  radial-gradient(73.68% 77.72% at 26.32% 50%, rgba(172, 236, 224, 0.8) 0%, rgba(172, 236, 224, 0.3) 100%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transition: 1.8s;
+}
+.popup .box_shape.c5 {
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    top: 83%;
+    border-radius: 50%;
+    background:  radial-gradient(73.68% 77.72% at 26.32% 50%, rgba(172, 236, 224, 0.8) 0%, rgba(172, 236, 224, 0.3) 100%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transition: 1.8s;
+}

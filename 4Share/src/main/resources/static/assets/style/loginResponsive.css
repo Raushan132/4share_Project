@@ -1,0 +1,85 @@
+@media screen and (max-width: 480px) {
+    body {
+        background: linear-gradient(180deg, hsl(208, 70%, 57%) 0%, rgba(76, 126, 233, 0.823) 15.28%, rgba(55, 203, 211, 0.671) 31.08%, rgba(70, 230, 204, 0.606) 37.92%, rgba(114, 219, 200, 0.6) 72.85%, rgba(118, 76, 114, 0.76) 99.69%, rgba(58, 213, 128, 0.61) 101.13%);
+    }
+
+label.error {
+    background: #f3d209e8;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 63px;
+    z-index:9;
+}
+label.logout {
+    background: #72ffbbf2;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 63px;
+    z-index:9;
+}
+    .loginFormBox {
+        padding: 20px;
+        width: 400px;
+    }
+
+    .loginFormBox h1 {
+        font-size: 30px;
+    }
+
+    #submit,
+    #reset {
+        padding: 10px 16px;
+        border: 1px;
+        margin: 20px;
+        display: inline-block;
+    }
+
+    #password,
+    select {
+        width: 80%;
+        margin-top: 0px;
+        padding: 7px 7px;
+    }
+
+    .rectangle {
+        position: relative;
+        /* z-index: -1; */
+        left: 35%;
+        bottom: 180px;
+        z-index: -1;
+        opacity: 20%;
+
+    }
+
+    .circle2 {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .middleConatiner {
+        margin-top: 80px;
+    }
+
+
+    .circle1 {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        left: 10px;
+    }
+
+    .circle2 {
+        top: 0px;
+        left: 200px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .svgIcon {
+        height: 50px;
+        width: 50px;
+        opacity: 0.9;
+    }
+}

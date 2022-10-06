@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="assets/style/nav.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/mob_nav.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/about.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/mob_about.css">
+
+	<script src="assets/js/jquery.js"></script>
+	<title>about us</title>
+</head>
+
+<body>
+	<!---------------------------------------------- Navbar [Start from here]------------------------------------------------>
+	<div class="container">
+		<div th:replace="navigation::header"></div>
+		<!------------------ This Is Content Area ------------------>
+		<div class="content">
+
+			<div class="logo">
+				4Share
+			</div>
+
+			<div class="about_head">
+				<h1>About</h1>
+			</div>
+
+			<hr />
+
+			<div class="about_content">
+				<!---------------------------------------------- About Apps [Start from here]------------------------------------------------>
+				<div class="about">
+					<p class="about-text" align="justify"><b>Copyright © 2022 4share Authors. All rights reserved.</b>
+						Our dream was to utilize technology around us & allow multiple users to download & upload files
+						wirelessly & being offline. With the development of 4share our dream come true. The 4share is
+						designed to keep pace with the changing needs and times. We want to make it easier for you to
+						share things at a brilliant speed.</p>
+				</div>
+
+				<!---------------------------------------------- Carousel - Slider [Start from here]------------------------------------------------>
+			<div class="slider">
+				<div class="slides">
+					<!-- Radio buttons -->
+					<input type="radio" name="radio-btn" id="radio1">
+					<input type="radio" name="radio-btn" id="radio2">
+					<input type="radio" name="radio-btn" id="radio3">
+
+					<!-- slider image -->
+					<div class="slide first">
+						<img src="assets/image/slide1.jpg" alt="Slide Image">
+					</div>
+					<div class="slide">
+						<img src="assets/image/slide2.png" alt="Slide Image">
+					</div>
+					<div class="slide">
+						<img src="assets/image/slide3.jpg" alt="Slide Image">
+					</div>
+
+					<!-- auto navigation -->
+					<div class="navigation-auto">
+						<div class="auto-btn1"></div>
+						<div class="auto-btn2"></div>
+						<div class="auto-btn3"></div>
+					</div>
+				</div>
+
+				<!-- manual navigation -->
+				<div class="navigation-manual">
+					<label for="radio1" class="manual-btn"></label>
+					<label for="radio2" class="manual-btn"></label>
+					<label for="radio3" class="manual-btn"></label>
+				</div>
+			</div>
+
+			<!---------------------------------------------- Dropdown [Start from here]------------------------------------------------>
+			<div class="dropdown">
+				<div class="dropdown1">
+					<input type="text" class="textBox" placeholder="Requirements..." readonly>
+					<div class="option">
+						<div>-> The Apache Tomcat® software.</div>
+						<div>-> MySQL Databse.</div>
+						<div>-> Browser like google chrome, Microsoft edge, Mozilla firefox.</div>
+						<div>-> Wifi connection.</div>
+					</div>
+				</div>
+				<div class="dropdown2">
+					<input type="text" class="textBox" placeholder="How it works..." readonly>
+					<div class="option">
+						<div>-> Open XAMPP Control Panel.</div>
+						<div>-> Start the MySQL & Tomcat®.</div>
+						<div>-> Login to the 4share.</div>
+						<div>-> Now share your files.</div>
+					</div>
+				</div>
+			</div>
+
+			<!---------------------------------------------- Our Team [Start from here]------------------------------------------------>
+			<div class="our_team_box">
+				<h1>Our Team</h1>
+				<div class="our_team_main">
+					<div class="our_team">
+						<div class="our_team_image">
+							<img src="assets/image/team1.jpeg" alt="">
+						</div>
+
+						<div class="name">Raushan Mishra</div>
+						<div class="profession">Web developer</div>
+
+						<a href="#"><button class="aboutMe">About Me</button></a>
+					</div>
+
+					<div class="social_icons">
+						<a href="https://mail.google.com"><img src="assets/aboutIcon/gmail.svg" alt="Gmail Icon"></a>
+						<a href="https://in.linkedin.com"><img src="assets/aboutIcon/linkedin.svg" alt="LinkedIn Icon"></a>
+						<a href="https://github.com"><img src="assets/aboutIcon/github.svg" alt="GitHub Icon"></a>
+					</div>
+
+					<div class="our_team_textbox">
+						<p>He done all the Backend of this project and manages the project as a group leader.</p>
+					</div>
+				</div>
+				<div class="our_team_main">
+					<div class="our_team">
+						<div class="our_team_image">
+							<img src="assets/image/team2.JPG" alt="">
+						</div>
+
+						<div class="name">Raushan Prajapati</div>
+						<div class="profession">Web developer</div>
+
+						<a href="#"><button class="aboutMe">About Me</button></a>
+					</div>
+
+					<div class="social_icons">
+						<a href="https://mail.google.com"><img src="assets/aboutIcon/gmail.svg" alt="Gmail Icon"></a>
+						<a href="https://in.linkedin.com"><img src="assets/aboutIcon/linkedin.svg" alt="LinkedIn Icon"></a>
+						<a href="https://github.com"><img src="assets/aboutIcon/github.svg" alt="GitHub Icon"></a>
+					</div>
+
+					<div class="our_team_textbox">
+						<p>He done all the Frontend of this project and he uses many tools to design this project.</p>
+					</div>
+				</div>
+				<div class="our_team_main">
+					<div class="our_team">
+						<div class="our_team_image">
+							<img src="assets/image/team3.jpeg" alt="">
+						</div>
+
+						<div class="name">Rajeev Kumar</div>
+						<div class="profession">Web developer</div>
+
+						<a href="#"><button class="aboutMe">About Me</button></a>
+					</div>
+
+					<div class="social_icons">
+						<a href="https://mail.google.com"><img src="assets/aboutIcon/gmail.svg" alt="Gmail Icon"></a>
+						<a href="https://in.linkedin.com"><img src="assets/aboutIcon/linkedin.svg" alt="LinkedIn Icon"></a>
+						<a href="https://github.com"><img src="assets/aboutIcon/github.svg" alt="GitHub Icon"></a>
+					</div>
+
+					<div class="our_team_textbox">
+						<p>He design login page of this project.</p>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript" src="assets/js/nav.js"></script>
+
+	<script src="assets/js/about.js"></script>
+
+</body>
+
+</html>

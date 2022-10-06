@@ -1,0 +1,50 @@
+@media (max-width:720px) {
+    .fileUpload_box {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    .fileUpload_button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .box {
+        position: relative;
+        bottom: 44px;
+        right: 35px;
+    }
+
+    .item {
+        width: 45px;
+        height: 45px;
+    }
+
+    .private_file {
+        margin-bottom: 20px;
+    }
+
+    .box img {
+        width: 25px;
+    }
+
+    .box-active {
+        height: 280px;
+    }
+ .refresh-box {
+    width: 100px;
+    position: absolute;
+    right: -94px;
+    top: 61px;
+  }
+  
+  .refresh-box a{
+      width:45px;
+      height:45px;  
+  }
+  .refresh-box a img{
+    width: 36px;
+    height: 36px;
+    }
+}

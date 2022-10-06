@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Error Page</title>
+<link rel="stylesheet" type="text/css" href="../assets/style/error.css">
+</head>
+<body>
+	<div id="main">
+	   <div class="img-box"><img src="../assets/fileIcon/error.gif" alt="errorGif"></div>
+		<div class="fof">
+			<h1 th:text="${error}">Error 404</h1>
+		</div>
+	</div>
+</body>
+</html>

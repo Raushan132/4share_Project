@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="assets/style/nav.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/mob_nav.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/document.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/mob_document.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/search_box.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/mob_search_box.css">
+	<script src="assets/js/jquery.js"></script>
+	<title>document</title>
+</head>
+
+<body>
+	<div class="container">
+		<div th:replace="navigation :: header"></div>
+
+		<div class="content">
+			<!-- search box  -->
+			<div class="search_functionality">
+				<form th:action="@{/search}" method="post">
+				<div class="selection_box">
+					<label for="select">Search By :</label>
+					<select name="option" id="select">
+						<option value="name" selected>search by name</option>
+						<option value="type">search by type</option>
+					</select>
+				</div>
+
+				<div class="search_box">
+					   <div class="search_bar">
+						<input type="text" name="s_keyword" class="search_text" placeholder="search here" required>
+						<button type="submit" class="search_button"><img src="assets/documentIcon/searchIcon.svg" alt=""></button>
+						</div>
+				</div>
+				</form>
+			</div>
+
+
+			<div class="logo">
+				4Share
+			</div>
+			
+		    <div class="document_head" th:with="www=${#httpServletRequest.requestURI}">
+				<span th:text="${#strings.arraySplit(www,'/')[1]}">Document</span>
+			</div> 
+			
+
+
+			<hr />
+
+			<div class="document_file_content">
+		
+				<div class="document_file" th:each="fileDetail: ${document_data}">
+					<img th:src="@{'assets/documentIcon/'+${fileDetail.fileSubType}+'.svg'}" alt="file icon">
+					<form action="/upload" method="post">
+						<div class="document_name">
+							<span><strong>Name : </strong><span th:text="${fileDetail.fileName}"></span></span>
+						</div>
+						<div class="document_type">
+							<span><strong>Type : </strong><span th:text="${fileDetail.extension}"></span></span>
+						</div>
+						<div class="document_size">
+							<span><strong>Size : </strong><span th:text="${fileDetail.size}"></span></span>
+						</div>
+						<div class="document_date">
+							<span><strong>Date : </strong><span th:text="${fileDetail.fileDate}"></span></span>
+						</div>
+
+						<div class="delete_section" sec:authorize="hasRole('ADMIN')" th:with="url=${#httpServletRequest.requestURI}">
+							<a th:href="@{/deletefileId/{uri}/{id}(uri=${#strings.arraySplit(url,'/')[1]},id=${fileDetail.fileId})}" class="btn delete_button"> <img src="assets/documentIcon/deleteIcon.svg" class="delete_button_icon" alt="delete icon">Delete</a>
+						</div>
+
+						<div class="download_section">
+							<a th:href="@{/downloadfile/{id}(id=${fileDetail.fileId})}" class="btn download_button"> <img src="assets/documentIcon/downloadIcon.svg" class="download_button_icon" alt="download icon">Download</a>
+						</div>
+					</form>
+				</div>
+				
+				
+			</div>
+			
+			
+			
+		</div>
+	</div>
+
+	<script type="text/javascript" src="assets/js/nav.js"></script>
+	
+
+	
+
+</body>
+
+</html>

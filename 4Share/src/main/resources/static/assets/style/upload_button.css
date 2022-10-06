@@ -1,0 +1,105 @@
+.fileUpload_box {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+}
+
+.fileUpload_button {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background: #0a8d8a;
+    box-shadow: 1px 2px 4px gray;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fileUpload_button:hover {
+    cursor: pointer;
+}
+
+.fileUpload_button img {
+    width: 45%;
+    transform: rotate(0deg);
+    transition: 0.4s;
+}
+
+.box {
+    position: relative;
+    bottom: 44px;
+    right: 53px;
+    /* height: 290px; */
+    height: 0px;
+    transition-delay: 0.3s;
+    width: 50px;
+    transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    justify-content: center;
+}
+
+.item {
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 0.4s ease-in;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 3px grey;
+}
+
+.refresh {
+    transition-delay: 0.2s;
+    background: green;
+    margin-bottom: 15px;
+}
+
+.public_file {
+    transition-delay: 0.2s;
+    background: #ff4336;
+    margin-bottom: 15px;
+}
+
+.private_file {
+    transition-delay: 0.2s;
+    background: #1565c0;
+    margin-bottom: 60px;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.item:hover img {
+    transform: rotate(360deg);
+    transition: all 0.5s;
+}
+
+.box img {
+    width: 40px;
+}
+
+/* after click on button */
+.box-active {
+    height: 340px;
+}
+
+.fileUpload_button-active img {
+    transform: rotate(180deg);
+}
+.refresh-box {
+    width: 100px;
+    position: absolute;
+    right: 20px;
+    top: 80px;
+}

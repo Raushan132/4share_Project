@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Coustard' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="assets/style/nav.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/setting.css">
+	<script src="assets/js/jquery.js"></script>
+	<title>navigation bar</title>
+</head>
+<body>
+<div class="container">
+	<div th:replace="navigation :: header"></div>
+	<div class="content">
+
+		<div class="header">
+			<div class="logo">4 share</div>
+			<div class="content_name">Setting</div>
+		</div>
+
+		<div class="cover">
+		<div class="setting_box">
+			
+			<div class="inSetting_box password" th:object="${passwordGen}" ><span class="headtxt">Password</span> <hr/>
+				<div class="cont-box">
+					<div class="icon icon-setting"><img src="assets/icon/user.svg" alt="icon"/></div>
+					<div class="setting-form">
+						<form >
+							<lable for="user" class="lbl_setting user">User:</lable>
+							<input type="password" class="user" id="user" th:value="*{user}" readonly/>
+							<input type="button" value="show" class="btn btn-show btn-show-user"/>
+							<a th:href="@{/changePassword/USER}" class="btn btn-user">Change</a>
+						</form>
+					</div>
+				</div>
+				<div class="cont-box">
+					<div class="icon icon-setting"><img src="assets/icon/user_pink.svg" alt="icon"/></div>
+					<div class="setting-form">
+					<form>
+						<lable for="guest" class="lbl_setting guest">Guest:</lable>
+						<input type="password" class="user" id="guest" th:value="*{guest}" readonly />
+						<input type="button" value="show" class="btn btn-show btn-show-guest"/>
+						<a th:href="@{/changePassword/GUEST}" class="btn btn-guest">Change</a>
+					</form>
+				</div>
+				</div>
+				
+			</div><!-- End of password -->
+
+				<div class="inSetting_box location"><span class="headtxt">Location</span> <hr/>
+					<div class="cont-box">
+						<div class="icon icon-setting"><img src="assets/icon/location.svg" alt="icon"/></div>
+					<div class="setting-form">
+						<form th:action="@{/changeLoc}" method="post" th:object="${location }">
+							<lable for="location" class="lbl_setting user">Location:</lable>
+							<input type="text" class="location" id="location" th:name="location" th:value="*{location}"  required/>
+							<input type="submit" value="Save" class="btn btn-show"/>
+						</form>
+					</div>						
+
+					</div>
+				</div><!-- End of location -->
+
+				<div class="inSetting_box email"><span class="headtxt">email</span> <hr/>
+					<div class="cont-box">
+							<div class="icon icon-setting adjust"><img src="assets/icon/email.svg" alt="icon"/></div>
+					<div class="setting-form">
+						<form>
+							<lable for="email" class="lbl_setting email">Email:</lable>
+							<input type="text" class="email" id="email" value="abc@gmail.com" readonly/>
+							<input type="button" value="Edit" class="btn btn-show"/>
+						</form>
+					</div>	
+
+					</div>
+				</div> <!--End of email -->
+
+				<div class="inSetting_box ipconfig"><span class="headtxt">ipconfig</span> <hr/>
+					<div class="cont-box">
+							<div class="icon icon-setting adjust"><img src="assets/icon/ip.svg" alt="icon"/></div>
+					<div class="setting-form">
+						<form th:object="${hostAddress }">
+							<lable for="address" class="lbl_setting address">Address:</lable>
+							<input type="text" class="address" id="address" th:value="*{location }" readonly/>
+							<input type="button" value="Copy" class="btn btn-show"/>
+						</form>
+					</div>	
+
+					</div>
+				</div><!--end of ip config -->
+
+		</div><!--end of setting -->
+		</div><!-- End of cover-->
+
+	</div>
+</div>
+
+   <script type="text/javascript" src="assets/js/nav.js"> </script>
+   <script type="text/javascript" src="assets/js/setting.js"> </script>
+   	
+
+  
+
+</body>
+</html>
